@@ -14,7 +14,7 @@ posts = Post.create([
 
 comments = Comment.create([
     {
-        body: "not so great!",
+        body: "not so great! sadly",
         post: posts.first
     }
 ])
