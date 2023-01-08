@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_192853) do
 
   create_table "comments", force: :cascade do |t|
     t.string "body"
+    t.integer "upvotes"
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_192853) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "body"
+    t.integer "upvotes"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

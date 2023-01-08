@@ -3,6 +3,7 @@
 
 github repo for CVWO 2022 :)
 
-busy past 3 weeks working on www.superflow.cc 
+backend Posts are found by slug id. i.e. by its title.
+backend Comments are found by integer id.
 
 by simba yip sin hang

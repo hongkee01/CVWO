@@ -12,7 +12,7 @@ module Api
 
         def show
             post = Post.find_by(slug: params[:slug])
-    
+
             render json: PostSerializer.new(post, options).serialized_json
         end
 
@@ -38,17 +38,18 @@ module Api
 
         def destroy
             post = Post.find_by(slug: params[:slug])
-    
+  
             if post.destroy
               head :no_content
             else
               render json: { errors: post.errors }, status: 422
             end
-          end
+        end
+
         private
 
         def post_params
-          params.require(:post).permit(:title, :body)
+          params.require(:post).permit(:title, :body, :upvotes, :slug)
         end
 
         def options
